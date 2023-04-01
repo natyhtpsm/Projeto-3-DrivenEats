@@ -183,6 +183,20 @@ header{
     font-size: 15px;
 }
 
+.review-total{
+    z-index: 10;
+    position:absolute;
+    width: 414px;
+    background-color: #eeeeee;
+    top: 0;
+}
+.review{
+    height: 353px;
+    width: 377px;
+    background-color: #50D074;
+    border-radius: 9px;
+
+}
 .food::-webkit-scrollbar{
     background-color: transparent;
     height: 3px;
