@@ -28,6 +28,9 @@ function changeButton(bttn){
 let check1;
 let check2;
 let check3;
+let chosenFood;
+let chosenDrink;
+let chosenDesert;
 
 function selectFood(opt1){
     const selectedFood = document.querySelector('.food .green-border ');
@@ -35,8 +38,9 @@ function selectFood(opt1){
         selectedFood.classList.remove('green-border');
     }
     opt1.classList.add('green-border');
-    
    check1 = 1;
+   chosenFood = document.getElementsByTagName("h1");
+   console.log(chosenFood);
     orderComplete();
 }
 function selectDrink(opt2){
@@ -64,7 +68,8 @@ function orderComplete() {
     if(check1 === 1 && check2 === 2 && check3 === 3){
         document.getElementById("green-button").style.display = "flex";
         document.getElementById("grey-button").style.display = "none";
-
     }
+    
 
 }
+
