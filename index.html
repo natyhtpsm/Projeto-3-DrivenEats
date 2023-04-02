@@ -15,7 +15,7 @@
     />
     <title>VeganEats</title>
   </head>
-  
+
   <body>
     <header>
         <div class="title">
@@ -26,7 +26,7 @@
     <div class="container">
         <h1 class="text"> Primeiro, seu prato</h1>
         <div class="food">
-            <div onclick="select()" class="food-opt">
+            <div class="food-opt hotdog"  onclick="selectFood(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Hot dog.jpg"/>
@@ -38,7 +38,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="food-opt">
+            <div class="food-opt vegburguer" onclick="selectFood(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Veg Burguer.jpg"/>
@@ -50,7 +50,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="food-opt">
+            <div class="food-opt seitan" onclick="selectFood(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Seitan.jpg"/> 
@@ -62,7 +62,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="food-opt">
+            <div class="food-opt nuggets" onclick="selectFood(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Nuggets.jpg"/>
@@ -77,7 +77,7 @@
         </div>
         <h1 class="text"> Agora, sua bebida</h1>
         <div class="drink">
-            <div class="drink-opt">
+            <div class="drink-opt guara" onclick="selectDrink(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Wewi guara.webp"/>
@@ -89,7 +89,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="drink-opt">
+            <div class="drink-opt abacaxi" onclick="selectDrink(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Suco abacaxi.jpg"/>
@@ -101,7 +101,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="drink-opt">
+            <div class="drink-opt cola" onclick="selectDrink(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Wewi cola.webp"/>
@@ -113,7 +113,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="drink-opt">
+            <div class="drink-opt laranja" onclick="selectDrink(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Suco laranja.png"/>
@@ -128,7 +128,7 @@
         </div>
         <h1 class="text">Por fim, sua sobremesa</h1>
         <div class="desert">
-            <div class="desert-opt">
+            <div class="desert-opt brownie" onclick="selectDesert(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Brownie.webp"/>
@@ -140,7 +140,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="desert-opt">
+            <div class="desert-opt brigadeiro" onclick="selectDesert(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Brigadeiros.webp"/>
@@ -152,7 +152,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="desert-opt">
+            <div class="desert-opt shake" onclick="selectDesert(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Milk Shake.webp"/>
@@ -164,7 +164,7 @@
                     <h1>R$ 10</h1>
                 </div>
             </div>
-            <div class="desert-opt">
+            <div class="desert-opt pudim" onclick="selectDesert(this)">
                 <div class="details">
                     <div class="img-details">
                         <img src="./img/Pudim.webp"/>
@@ -178,10 +178,14 @@
             </div> 
         </div>
         <div class="bottom-bar">
-            <div class="confirm">
+            <div id="grey-button" class="confirm">
                 <h1 class="confirm-txt">Selecione os 3 itens para fechar o pedido</h1>
             </div>
+            <div id="green-button" class="confirm-2">
+                <h1 class="confirm-txt">Finalizar o pedido</h1>
+            </div>
         </div>
+
 <!--    <div class="review-total">
             <div class="review hidden">
                 <h1> Confirme seu pedido:</h1>
@@ -201,6 +205,6 @@
         </div> -->
 
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
