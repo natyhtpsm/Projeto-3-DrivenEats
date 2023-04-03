@@ -4,9 +4,9 @@ let check3;
 let chosenFood;
 let chosenDrink;
 let chosenDessert;
-let priceFood;
-let priceDrink;
-let priceDessert;
+let priceFood=0;
+let priceDrink=0;
+let priceDessert=0;
 let total=0;
 
 function selectFood(opt1){
@@ -45,7 +45,7 @@ function hotdog(){
 }
 function vegburguer(){
     chosenFood = "Hulk-Burguer";
-    priceFood=7.00;
+    priceFood=7.99;
 }
 function seitan(){
     chosenFood = "Seitan";
@@ -95,7 +95,7 @@ function orderComplete() {
         document.getElementById("green-button").style.display = "flex";
         document.getElementById("grey-button").style.display = "none";
     }
-    total = Number(chosenFood)+Number(chosenDrink)+Number(chosenDessert);
+    total = Number(priceFood)+Number(priceDrink)+Number(priceDessert);
 }
 
 function sendWpp(){
@@ -103,7 +103,7 @@ function sendWpp(){
     "- Prato: " + chosenFood + "\n" +
     "- Bebida: " + chosenDrink + "\n" +
     "- Sobremesa: " + chosenDessert + "\n\n" +
-    "Total: R$ " + Number(total);
+    "Total: R$ " + total.toFixed(2);
     console.log(message);
 
     window.open('https://wa.me/5561992687312?text=' +encodeURIComponent(message));
