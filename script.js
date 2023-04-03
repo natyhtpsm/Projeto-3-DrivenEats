@@ -95,7 +95,7 @@ function orderComplete() {
         document.getElementById("green-button").style.display = "flex";
         document.getElementById("grey-button").style.display = "none";
     }
-    total = Number(priceFood)+Number(priceDrink)+Number(priceDessert);
+    // total=Number(priceFood)+Number(priceDessert)+Number(priceDrink);
 }
 
 function sendWpp(){
@@ -103,7 +103,7 @@ function sendWpp(){
     "- Prato: " + chosenFood + "\n" +
     "- Bebida: " + chosenDrink + "\n" +
     "- Sobremesa: " + chosenDessert + "\n\n" +
-    "Total: R$ " + total.toFixed(2);
+    "Total: R$ " + (priceFood+priceDessert+priceDrink);
     console.log(message);
 
     window.open('https://wa.me/5561992687312?text=' +encodeURIComponent(message));
