@@ -102,7 +102,7 @@ header{
     
 }
 
-.desert{
+.dessert{
     background-color:#E5E5E5;
     width: 100%;
     height: 216px;
@@ -114,7 +114,7 @@ header{
     overflow-y: hidden;
 }
 
-.desert-opt{
+.dessert-opt{
     background-color:white;
     height: 216px;
     width: 172px;
@@ -252,11 +252,11 @@ header{
 
 }
 
-.desert::-webkit-scrollbar{
+.dessert::-webkit-scrollbar{
     background-color: transparent;
     height: 3px;
 }
-.desert::-webkit-scrollbar-thumb{
+.dessert::-webkit-scrollbar-thumb{
     background-color:transparent;
     height: 3px;
 

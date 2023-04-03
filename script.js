@@ -1,12 +1,12 @@
 /* 
 let nameFood = '';
 let nameDrink = '';
-let nameDesert = ''; 
+let namedessert = ''; 
 
 function verify(){
     if(nameFood !== ''){
         if(nameDrink !== ''){
-            if(nameDesert !== ''){
+            if(namedessert !== ''){
                 const buttonContinue = document.querySelector('.confirm');
                 buttonContinue.classList.add('green-button');
             }
@@ -16,7 +16,7 @@ function verify(){
 }
 
 function changeButton(bttn){
-    //if(food, drink e desert selecionado){
+    //if(food, drink e dessert selecionado){
         const confirmTxt = document.querySelector('.confirm-txt'); //pega o texto do butão
         confirmTxt.innerHTML = 'Fechar Pedido';
         bttn.classList.add('green-button');
@@ -30,7 +30,11 @@ let check2;
 let check3;
 let chosenFood;
 let chosenDrink;
-let chosenDesert;
+let chosenDessert;
+let priceFood;
+let priceDrink;
+let priceDessert;
+let total;
 
 function selectFood(opt1){
     const selectedFood = document.querySelector('.food .green-border ');
@@ -39,8 +43,7 @@ function selectFood(opt1){
     }
     opt1.classList.add('green-border');
    check1 = 1;
-   chosenFood = document.getElementsByTagName("h1");
-   console.log(chosenFood);
+
     orderComplete();
 }
 function selectDrink(opt2){
@@ -53,15 +56,65 @@ function selectDrink(opt2){
     check2 = 2;
     orderComplete();
 }
-function selectDesert(opt3){
-    const selectedDesert = document.querySelector('.desert .green-border ');
-    if(selectedDesert !== null){
-        selectedDesert.classList.remove('green-border');
+function selectdessert(opt3){
+    const selecteddessert = document.querySelector('.dessert .green-border ');
+    if(selecteddessert !== null){
+        selecteddessert.classList.remove('green-border');
     }
     opt3.classList.add('green-border');
     check3 = 3;
     orderComplete();
 }
+
+function hotdog(){
+    chosenFood = "NOT Dog";
+    priceFood = 8;
+}
+function vegburguer(){
+    chosenFood = "Hulk-Burguer";
+    priceFood = 7;
+}
+function seitan(){
+    chosenFood = "Seitan";
+    priceFood = 12;
+}
+function nuggets(){
+    chosenFood = "Nuggets";
+    priceFood = 8;
+}
+function guara(){
+    chosenDrink = "Wewi®️ Guaraná";
+    priceDrink = 5;
+}
+function abacaxi(){
+    chosenDrink = "Suco de Abacaxi";
+    priceDrink = 4;
+}
+function cola(){
+    chosenDrink = "Wewi®️ Cola";
+    priceDrink = 5;
+}
+function laranja(){
+    chosenDrink = "Suco de Laranja";
+    priceDrink = 3;
+}
+function brownie(){
+    chosenDessert = "Brownie";
+    priceDessert = 4;
+}
+function brigadeiro(){
+    chosenDessert = "Brigadeiros";
+    priceDessert = 7;
+}
+function shake(){
+    chosenDessert = "Milk-Shake Oreo®️";
+    priceDessert = 8;
+}
+function pudim(){
+    chosenDessert = "Pudim de Tapioca";
+    priceDessert = 6;
+}
+
 
 function orderComplete() {
 
@@ -69,7 +122,6 @@ function orderComplete() {
         document.getElementById("green-button").style.display = "flex";
         document.getElementById("grey-button").style.display = "none";
     }
-    
 
 }
 
