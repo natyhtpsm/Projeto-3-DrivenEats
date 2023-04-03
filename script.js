@@ -1,30 +1,3 @@
-/* 
-let nameFood = '';
-let nameDrink = '';
-let namedessert = ''; 
-
-function verify(){
-    if(nameFood !== ''){
-        if(nameDrink !== ''){
-            if(namedessert !== ''){
-                const buttonContinue = document.querySelector('.confirm');
-                buttonContinue.classList.add('green-button');
-            }
-        }
-    }
-
-}
-
-function changeButton(bttn){
-    //if(food, drink e dessert selecionado){
-        const confirmTxt = document.querySelector('.confirm-txt'); //pega o texto do butão
-        confirmTxt.innerHTML = 'Fechar Pedido';
-        bttn.classList.add('green-button');
-
-    //}
-    verify();
-} */
-
 let check1;
 let check2;
 let check3;
@@ -34,7 +7,6 @@ let chosenDessert;
 let priceFood;
 let priceDrink;
 let priceDessert;
-let total;
 
 function selectFood(opt1){
     const selectedFood = document.querySelector('.food .green-border ');
@@ -67,52 +39,52 @@ function selectdessert(opt3){
 }
 
 function hotdog(){
-    chosenFood = "NOT Dog";
-    priceFood = 8;
+    chosenFood = "NOT-Dog";
+    priceFood=8;
 }
 function vegburguer(){
     chosenFood = "Hulk-Burguer";
-    priceFood = 7;
+    priceFood=7;
 }
 function seitan(){
     chosenFood = "Seitan";
-    priceFood = 12;
+    priceFood=12;
 }
 function nuggets(){
     chosenFood = "Nuggets";
-    priceFood = 8;
+    priceFood=8;
 }
 function guara(){
     chosenDrink = "Wewi®️ Guaraná";
-    priceDrink = 5;
+    priceDrink =5;
 }
 function abacaxi(){
     chosenDrink = "Suco de Abacaxi";
-    priceDrink = 4;
+    priceDrink=4;
 }
 function cola(){
     chosenDrink = "Wewi®️ Cola";
-    priceDrink = 5;
+    priceDrink=5;
 }
 function laranja(){
     chosenDrink = "Suco de Laranja";
-    priceDrink = 3;
+    priceDrink=3;
 }
 function brownie(){
     chosenDessert = "Brownie";
-    priceDessert = 4;
+    priceDessert=4;
 }
 function brigadeiro(){
     chosenDessert = "Brigadeiros";
-    priceDessert = 7;
+    priceDessert=7;
 }
 function shake(){
     chosenDessert = "Milk-Shake Oreo®️";
-    priceDessert = 8;
+    priceDessert=8;
 }
 function pudim(){
     chosenDessert = "Pudim de Tapioca";
-    priceDessert = 6;
+    priceDessert=6;
 }
 
 
@@ -125,3 +97,13 @@ function orderComplete() {
 
 }
 
+function sendWpp(){
+    let message = "Olá, gostaria de fazer o pedido:" + "\n\n"+
+    "- Prato: " + chosenFood + "\n" +
+    "- Bebida: " + chosenDrink + "\n" +
+    "- Sobremesa: " + chosenDessert + "\n\n" +
+    "Total: R$ " + Number(priceFood+priceDessert+priceDrink);
+    console.log(message);
+
+    window.open('https://wa.me/5561992687312?text=' +encodeURIComponent(message));
+}
