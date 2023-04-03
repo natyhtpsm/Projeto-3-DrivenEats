@@ -7,6 +7,7 @@ let chosenDessert;
 let priceFood;
 let priceDrink;
 let priceDessert;
+let total=0;
 
 function selectFood(opt1){
     const selectedFood = document.querySelector('.food .green-border ');
@@ -40,51 +41,51 @@ function selectdessert(opt3){
 
 function hotdog(){
     chosenFood = "NOT-Dog";
-    priceFood=8;
+    priceFood=8.49;
 }
 function vegburguer(){
     chosenFood = "Hulk-Burguer";
-    priceFood=7;
+    priceFood=7.00;
 }
 function seitan(){
     chosenFood = "Seitan";
-    priceFood=12;
+    priceFood=12.99;
 }
 function nuggets(){
     chosenFood = "Nuggets";
-    priceFood=8;
+    priceFood=8.49;
 }
 function guara(){
     chosenDrink = "Wewi Guaraná";
-    priceDrink =5;
+    priceDrink =4.99;
 }
 function abacaxi(){
     chosenDrink = "Suco de Abacaxi";
-    priceDrink=4;
+    priceDrink=3.99;
 }
 function cola(){
     chosenDrink = "Wewi Cola";
-    priceDrink=5;
+    priceDrink=4.99;
 }
 function laranja(){
     chosenDrink = "Suco de Laranja";
-    priceDrink=3;
+    priceDrink=2.99;
 }
 function brownie(){
     chosenDessert = "Brownie";
-    priceDessert=4;
+    priceDessert=3.99;
 }
 function brigadeiro(){
     chosenDessert = "Brigadeiros";
-    priceDessert=7;
+    priceDessert=5.99;
 }
 function shake(){
     chosenDessert = "Milk-Shake Oreo";
-    priceDessert=8;
+    priceDessert=7.49;
 }
 function pudim(){
     chosenDessert = "Pudim de Tapioca";
-    priceDessert=6;
+    priceDessert=5.99;
 }
 
 
@@ -94,7 +95,7 @@ function orderComplete() {
         document.getElementById("green-button").style.display = "flex";
         document.getElementById("grey-button").style.display = "none";
     }
-
+    total = Number(chosenFood)+Number(chosenDrink)+Number(chosenDessert);
 }
 
 function sendWpp(){
@@ -102,7 +103,7 @@ function sendWpp(){
     "- Prato: " + chosenFood + "\n" +
     "- Bebida: " + chosenDrink + "\n" +
     "- Sobremesa: " + chosenDessert + "\n\n" +
-    "Total: R$ " + Number(priceFood+priceDessert+priceDrink);
+    "Total: R$ " + Number(total);
     console.log(message);
 
     window.open('https://wa.me/5561992687312?text=' +encodeURIComponent(message));
