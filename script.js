@@ -55,7 +55,7 @@ function nuggets(){
     priceFood=8;
 }
 function guara(){
-    chosenDrink = "Wewi®️ Guaraná";
+    chosenDrink = "Wewi Guaraná";
     priceDrink =5;
 }
 function abacaxi(){
@@ -63,7 +63,7 @@ function abacaxi(){
     priceDrink=4;
 }
 function cola(){
-    chosenDrink = "Wewi®️ Cola";
+    chosenDrink = "Wewi Cola";
     priceDrink=5;
 }
 function laranja(){
@@ -79,7 +79,7 @@ function brigadeiro(){
     priceDessert=7;
 }
 function shake(){
-    chosenDessert = "Milk-Shake Oreo®️";
+    chosenDessert = "Milk-Shake Oreo";
     priceDessert=8;
 }
 function pudim(){
